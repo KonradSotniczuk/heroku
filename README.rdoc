@@ -1,28 +1,59 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Howto start:
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+
+    I created empty repository on GitHub.
+    I run git-bash and typed git init, so inside project root appeared .git folder.
+    I added some files to version control using git add sourcesFolderName
+    I committed files added in previous step using git commit -m "initial commit"
+    I specified remote repository using git remote add MyProject <url>
+    Finally git push, but nothing is pushed to remote repo... (no authorization failure)
+
+
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin <project url>
+git push -f origin master
+
+
+
+1. git init
+2. git add -A
+3. git commit -m "Git Initialize"   # Dowolny komentarz w ""
+4. git push #wysyla do Gita
+7. git checkout -b nazwaBrancha     #tworzy branch o nazwie
+7,5.git checkout master lub naswabrancha pozwala sie przelaczac medzy nimi.
+8. git push -u origin nazwaBrancha    #pushuje na branch
+9. #wchodzac na mastera (jesli mergujemy do mastera)
+git merge nazwaBrancha.
+
+Wysyłąnie na bitbucket
+4. Na twoim koncie w bitbucket klikasz repositories -> createrepositiory i wpisujesz nazwe
+5. Po stworzeniu bedziesz mial na stronie opis jak zrobic push. W skrócie:
+cd /path/to/my/repo
+git remote add origin https://ksotniczuk@bitbucket.org/ksotniczuk/NAZWA.git
+git push -u origin --all # pushes up the repo and its refs for the first time
+git push -u origin --tags # pushes up any tags Jeśli masz tagi.
+
+Wysyłąnie na Heroku
+5. heroku create
+6. git push heroku master
+
+git push heroku yourbranch:master  - Branches pushed to Heroku other than master will be ignored by this command. If you’re working out of another branch locally, you can either merge to master before pushing, or specify that you want to push your local branch to a remote master.
+
+
+
+
+
+
+git status sprawdza czy byly jakies zmiany, jak byly i chcesz je puscic, to robisz commit.
+USUWANIE BRANCHA:
+To delete a local branch - git branch -d the_local_branch
+
+To remove a remote branch (if you know what you are doing!) - git push origin :the_remote_branch
+
+
+
+
